@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cas8w0ayjirep"]
+
+[ext_resource type="Script" uid="uid://bhsq01fy5ep77" path="res://main_node_2d.gd" id="1_45nqt"]
+[ext_resource type="PackedScene" uid="uid://dj0dhy8aapkp" path="res://character/character_0.tscn" id="1_f73ox"]
+[ext_resource type="PackedScene" uid="uid://bxdxio20457ky" path="res://scenes/ground_0/ground_0.tscn" id="2_6a7e6"]
+[ext_resource type="PackedScene" uid="uid://b088v41g08hwf" path="res://scenes/background/background_00.tscn" id="4_45nqt"]
+[ext_resource type="PackedScene" uid="uid://cblbny8lvqh0t" path="res://Spawner/Spawner.tscn" id="5_3v44e"]
+[ext_resource type="PackedScene" uid="uid://bpvrgwuru6i02" path="res://Obstacle/Obstacle_test.tscn" id="6_g3df5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cim6f"]
+size = Vector2(1300, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ly8"]
+size = Vector2(1300, 250)
+
+[node name="MainNode2D" type="Node2D" unique_id=2127104124]
+script = ExtResource("1_45nqt")
+metadata/_edit_horizontal_guides_ = [626.0]
+metadata/_edit_vertical_guides_ = [1272.0]
+
+[node name="BackgroundNode2D" parent="." unique_id=84819888 instance=ExtResource("2_6a7e6")]
+z_index = -2
+scroll_offset = Vector2(147, 443)
+
+[node name="TouchScreenButton_roll" type="TouchScreenButton" parent="." unique_id=1251113933]
+show_behind_parent = true
+top_level = true
+z_index = 7
+position = Vector2(566, 450)
+shape = SubResource("RectangleShape2D_cim6f")
+action = "roll"
+
+[node name="Background00" parent="." unique_id=698481357 instance=ExtResource("4_45nqt")]
+z_index = -100
+scale = Vector2(0.845, 0.845)
+
+[node name="Spawner" parent="." unique_id=1339564541 instance=ExtResource("5_3v44e")]
+obstacle_scene = ExtResource("6_g3df5")
+
+[node name="CharacterNode2D" parent="." unique_id=1299531510 instance=ExtResource("1_f73ox")]
+z_index = 3
+position = Vector2(68, 450)
+scale = Vector2(0.3, 0.3)
+
+[node name="TouchScreenButton_jump" type="TouchScreenButton" parent="." unique_id=269694229]
+position = Vector2(593, 173)
+shape = SubResource("RectangleShape2D_o1ly8")
+action = "jump"

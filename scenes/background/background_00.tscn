@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b088v41g08hwf"]
+
+[ext_resource type="Texture2D" uid="uid://d12rskoaig7wv" path="res://pictures/background/夏日校园设施与林荫小径.png" id="1_caqrb"]
+[ext_resource type="Script" uid="uid://dbvfnom0dger6" path="res://scenes/background/back_00.gd" id="2_caqrb"]
+
+[node name="Parallax2D" type="Parallax2D" unique_id=1547777696]
+repeat_size = Vector2(1380, 0)
+metadata/_edit_horizontal_guides_ = [712.0]
+metadata/_edit_vertical_guides_ = [1025.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=876893823]
+texture_repeat = 2
+position = Vector2(333.5, 249.5)
+scale = Vector2(0.81375, 1.0150862)
+texture = ExtResource("1_caqrb")
+region_enabled = true
+region_rect = Rect2(-10.7178955, 0, 1698, 926)
+script = ExtResource("2_caqrb")

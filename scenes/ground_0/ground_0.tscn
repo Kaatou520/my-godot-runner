@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bxdxio20457ky"]
+
+[ext_resource type="Script" uid="uid://bxtqlvmxvylt" path="res://scenes/ground_0/ground_0.gd" id="1_1g3oa"]
+[ext_resource type="Shader" uid="uid://dy4xijg2nwyl0" path="res://scenes/ground_0/ground_0.gdshader" id="1_4xocl"]
+[ext_resource type="Texture2D" uid="uid://w3p771d0sc6k" path="res://pictures/background/阳光斑驳的像素庭院.png" id="1_6wjed"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_24gu0"]
+shader = ExtResource("1_4xocl")
+shader_parameter/fade_top = 0.15
+shader_parameter/fade_bottom = 0.15
+shader_parameter/softness = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owphe"]
+size = Vector2(1992.4063, 67.510414)
+
+[node name="Parallax2D" type="Parallax2D" unique_id=1443999851]
+repeat_size = Vector2(1200, 0)
+script = ExtResource("1_1g3oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=724829566]
+material = SubResource("ShaderMaterial_24gu0")
+position = Vector2(875.99994, 148.7635)
+scale = Vector2(1.0300354, 1.0368768)
+texture = ExtResource("1_6wjed")
+region_enabled = true
+region_rect = Rect2(0, 525.0262, 1986.4451, 149.36835)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=782645425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=2078657557]
+position = Vector2(-0.9707947, -27.740519)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_owphe")

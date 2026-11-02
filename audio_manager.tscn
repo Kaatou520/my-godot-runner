@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcae4j830qe2l"]
+
+[ext_resource type="Script" uid="uid://bb0k3a7ve4uhe" path="res://audio_manager.gd" id="1_6jj5d"]
+[ext_resource type="AudioStream" uid="uid://4p8orab3s4os" path="res://music/活跃黑江乐 - 「邦友的酒(DJ版)」梦的结唱halo [exhigh].mp3" id="2_5olve"]
+[ext_resource type="AudioStream" uid="uid://cp3spto0ygh70" path="res://music/雨爱四凤.mp3" id="3_6jj5d"]
+
+[node name="AudioManager" type="CanvasLayer" unique_id=935398491]
+script = ExtResource("1_6jj5d")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1356140944]
+stream = ExtResource("2_5olve")
+pitch_scale = 0.99
+
+[node name="rainlove" type="AudioStreamPlayer" parent="." unique_id=823891777]
+stream = ExtResource("3_6jj5d")
+volume_db = -8.465

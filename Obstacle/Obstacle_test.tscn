@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bpvrgwuru6i02"]
+
+[ext_resource type="Script" uid="uid://cv1ecrpsmwy2v" path="res://Obstacle/obstacle_test.gd" id="1_wygq1"]
+[ext_resource type="Texture2D" uid="uid://cb16m2dqdc8gh" path="res://Obstacle/复古像素风障碍物素材表.png" id="2_wygq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ly8"]
+size = Vector2(88, 33)
+
+[node name="Obstacle" type="Area2D" unique_id=1568142919]
+script = ExtResource("1_wygq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856450595]
+z_index = 1
+texture_filter = 1
+position = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_o1ly8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1692609299]
+z_index = 4
+texture_filter = 1
+position = Vector2(-42, 11)
+scale = Vector2(0.274, 0.26)
+texture = ExtResource("2_wygq1")
+centered = false
+offset = Vector2(0, -100)
+region_enabled = true
+region_rect = Rect2(370.84076, 756.6689, 340.8307, 132.90247)

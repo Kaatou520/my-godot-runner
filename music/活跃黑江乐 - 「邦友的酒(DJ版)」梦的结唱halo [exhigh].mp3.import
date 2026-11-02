@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4p8orab3s4os"
+path="res://.godot/imported/活跃黑江乐 - 「邦友的酒(DJ版)」梦的结唱halo [exhigh].mp3-1628322b1fd9f81b8c1ba0666a6efca9.mp3str"
+
+[deps]
+
+source_file="res://music/活跃黑江乐 - 「邦友的酒(DJ版)」梦的结唱halo [exhigh].mp3"
+dest_files=["res://.godot/imported/活跃黑江乐 - 「邦友的酒(DJ版)」梦的结唱halo [exhigh].mp3-1628322b1fd9f81b8c1ba0666a6efca9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
