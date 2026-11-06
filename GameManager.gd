@@ -1,4 +1,6 @@
 extends Node
+#视频是否播放
+var has_played_video: bool = false
 #障碍物动画效果开关
 var enable_obstacle_anim: bool = false
 # 当前全局速度倍率（所有东西的基础速度）

@@ -46,6 +46,10 @@ text = "hi"
 layout_mode = 2
 text = "开始游戏"
 
+[node name="GoLeaderboard" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1558561366]
+layout_mode = 2
+text = "GoLeaderboard"
+
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=334050276]
 layout_mode = 1
 anchors_preset = 15
@@ -54,12 +58,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+ratio = 1.777
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer" unique_id=1193825287]
 layout_mode = 2
 stream = ExtResource("2_filc1")
 volume_db = -80.0
 autoplay = true
+expand = true
 script = SubResource("GDScript_nh5hm")
 
 [node name="FadeOverlay" type="ColorRect" parent="." unique_id=1624915727]
@@ -72,5 +78,16 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[connection signal="button_down" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]
+[node name="SkipButton" type="Button" parent="." unique_id=1309907576]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Skip"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/GoLeaderboard" to="." method="_on_go_leaderboard_pressed"]
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

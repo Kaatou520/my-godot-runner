@@ -19,3 +19,8 @@ func _ready() -> void:
 	# $ObstacleSpawnTimer.start()
 	#障碍物开始q弹
 	GameManager.enable_obstacle_anim = true
+
+
+func _on_go_ui_pressed() -> void:
+	AudioManager.stopbgm()
+	get_tree().change_scene_to_file("res://UI/control.tscn")

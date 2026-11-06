@@ -23,6 +23,14 @@ func play_music() -> void:
 	if not bgm_player.playing:
 		bgm_player.play()
 
+func stopbgm() -> void:
+	bgm_player.stop()
+	
+func stoprainlove() -> void:
+	bgm_rainlove.stop()
+	
 # 获取状态（保持不变）
 func is_music_playing() -> bool:
 	return bgm_player.playing
+	
+	

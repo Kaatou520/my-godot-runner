@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqq4v7wxeqrio"
-path="res://.godot/imported/背景临时.jpg-e9028b69d51d2b6c776ec997ca0fa033.ctex"
+uid="uid://dp6lfiidj0jpc"
+path="res://.godot/imported/anna_beat.png-e591af261ce796986c4ae526f492b5a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/background/背景临时.jpg"
-dest_files=["res://.godot/imported/背景临时.jpg-e9028b69d51d2b6c776ec997ca0fa033.ctex"]
+source_file="res://pictures/characters/anna_beat.png"
+dest_files=["res://.godot/imported/anna_beat.png-e591af261ce796986c4ae526f492b5a5.ctex"]
 
 [params]
 

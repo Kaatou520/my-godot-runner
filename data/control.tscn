@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://df4jo7apkuoqw"]
+
+[ext_resource type="Script" uid="uid://bs87h3eph1dub" path="res://data/control.gd" id="1_xtmuw"]
+
+[node name="Leaderboard" type="Control" unique_id=222823357]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xtmuw")
+
+[node name="RankList" type="VBoxContainer" parent="." unique_id=2047798812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1698488495]
+
+[node name="GoUI" type="Button" parent="." unique_id=627640177]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "GoUI"
+
+[connection signal="pressed" from="GoUI" to="." method="_on_go_ui_pressed"]
