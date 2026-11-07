@@ -42,15 +42,13 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	
 	if body is CharacterBody2D:
-		# 🌟 核心逻辑：撞到第一个障碍物
+		# 核心逻辑：撞到第一个障碍物
 		if not GameManager.enable_obstacle_anim:
-			# 1. 开启后续障碍物的 Q 弹动画
 			GameManager.enable_obstacle_anim = true
 			print("撞上第一个障碍物！后续障碍物开始 Q 弹！")
 			
 		print("游戏结束！")
-		# 你的死亡重载逻辑（需要时把下面两行的注释取消掉即可）
-		# GameManager.is_game_running = false
-		# get_tree().reload_current_scene()
+		
+		# 👈 用这行代码呼叫主场景的 die() 函数！
+		get_tree().current_scene.die()

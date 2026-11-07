@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b088v41g08hwf" path="res://scenes/background/background_00.tscn" id="4_45nqt"]
 [ext_resource type="PackedScene" uid="uid://cblbny8lvqh0t" path="res://Spawner/Spawner.tscn" id="5_3v44e"]
 [ext_resource type="PackedScene" uid="uid://bpvrgwuru6i02" path="res://Obstacle/Obstacle_test.tscn" id="6_g3df5"]
+[ext_resource type="PackedScene" uid="uid://ch272ff6nbldb" path="res://UI/game_over_ui.tscn" id="7_f07hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cim6f"]
 size = Vector2(1300, 300)
@@ -56,5 +57,21 @@ offset_left = -49.0
 offset_bottom = 31.0
 grow_horizontal = 0
 text = "GOUI"
+
+[node name="UILayer_die" type="CanvasLayer" parent="." unique_id=1516499120]
+
+[node name="ScoreLabel" type="Label" parent="UILayer_die" unique_id=1712277513]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 34.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Score：0"
+
+[node name="GameOverUI" parent="UILayer_die" unique_id=1338019511 instance=ExtResource("7_f07hb")]
+process_mode = 3
+visible = false
 
 [connection signal="pressed" from="GoUI" to="." method="_on_go_ui_pressed"]
